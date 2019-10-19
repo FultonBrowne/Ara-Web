@@ -11,7 +11,6 @@
       background-image: url("image.jpg");
       background-repeat: no-repeat;
       background-size: cover;
-      margin: 0ch;
     }
     .topnav {
       overflow: hidden;
@@ -21,9 +20,10 @@
     /* Style the links inside the navigation bar */
     .topnav a {
       float: left;
-      
+      display: block;
       color: black;
       text-align: center;
+      padding: 14px 16px;
       text-decoration: none;
       font-size: 17px;
     }
@@ -43,10 +43,48 @@
     /* Style the search box inside the navigation bar */
     .topnav input[type="text"] {
       float: right;
+      padding: 6px;
       border: none;
-    
+      margin-top: 8px;
+      margin-right: 16px;
       font-size: 17px;
     }
+
+    /* FOR sidenavbar */
+    
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
 
     /* When the screen is less than 600px wide, stack the links and the search field vertically instead of horizontally */
     @media screen and (max-width: 600px) {
@@ -57,6 +95,7 @@
         text-align: left;
         width: 100%;
         margin: 0;
+        padding: 14px;
       }
       .topnav input[type="text"] {
         border: 1px solid #ccc;
@@ -66,8 +105,8 @@
 
   <div style="color: white; display: flex; font-size: 20px;  background: rgba(0, 0, 0, 0.75);
   ">
-    <div style="flex:22">
-      <i class="material-icons">
+    <div style="flex:22" >
+      <i class="material-icons" onclick="openNav()" style="cursor:pointer">
         menu
       </i>
     </div>
@@ -81,12 +120,12 @@
     </div>
   </div>
   <div
-    style="padding-top: 100px;color: white; font-size: 90px;    background: rgba(0, 0, 0, 0.75);
+    style="padding-top: 100px;color: white; font-size: 90px; padding-left: 30px;   background: rgba(0, 0, 0, 0.75);
     "
   >
     good afternoon
   </div>
-  <div style="color: white;margin-top: 90px;margin-left: 50px;margin-right: 50px; font-size: 30px;  background: rgba(0, 0, 0, 0.75);
+  <div style="color: white;margin-top: 90px;margin-left: 50px; font-size: 30px;  background: rgba(0, 0, 0, 0.75);
   ">
     Lorem Ipsum is simply dummy text of the printing and typesetting industry.
     Lorem Ipsum has been the industry's standard dummy text ever since the
@@ -104,5 +143,24 @@
       keyboard_voice
     </i>
   </div>
+
+  <!-- SIDE navbar -->
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#">About</a>
+    <a href="#">Test</a>
+    <a href="#">test2</a>
+    <a href="#">Contact</a>
+  </div>
+  
+  <script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+    }
+    
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+    }
+    </script>
  
 </html>
