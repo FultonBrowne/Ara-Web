@@ -1,3 +1,4 @@
+
 function openNav() {
     document.getElementById("mySidenav").style.width = "250px";
   }
@@ -5,6 +6,7 @@ function openNav() {
   function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
   }
+<<<<<<< Updated upstream
 
   $(document).ready(function() {
 
@@ -21,3 +23,6 @@ function openNav() {
     });
 
   });
+=======
+  
+>>>>>>> Stashed changes

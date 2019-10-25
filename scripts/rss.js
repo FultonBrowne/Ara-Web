@@ -1,3 +1,4 @@
+
 var feedUrl = 'https://araserver.herokuapp.com';
 $.ajax({
     type: 'GET',
