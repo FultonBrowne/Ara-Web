@@ -5,3 +5,19 @@ function openNav() {
   function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
   }
+
+  $(document).ready(function() {
+
+    $('#searchTrigger').click(function() {
+      $('#searchBar').slideToggle();
+      $('#searchInput').focus();
+    });
+
+    $('#searchTrigger').keypress(function(event) {
+      if(event.keyCode === 13) {
+        $('#searchBar').slideToggle();
+        $('#searchInput').focus();
+      }
+    });
+
+  });
