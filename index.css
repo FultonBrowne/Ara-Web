@@ -56,6 +56,31 @@ body {
   font-size: 30px;
 }
 
+#searchTrigger {
+  cursor:pointer;
+}
+
+#searchBar {
+  position: absolute;
+  right: 47px;
+  top: 48px;
+  display:none;
+}
+
+#searchInput {
+  padding:5px;
+  width:200px;
+}
+
+#searchButton {
+  position:absolute;
+  right:0;
+  top:8px;
+  cursor:pointer;
+}
+
+#searchButton i {font-size:20px;}
+
 .menu {
   display: none;
 }

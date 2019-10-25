@@ -1,3 +1,4 @@
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -30,12 +31,18 @@
           </i>
         </div>
         <div>
-          <i class="material-icons">
-            search
-          </i>
-          <i class="material-icons">
-            more_vert
-          </i>
+
+          <span id="searchTrigger" tabindex="0">
+            <i class="material-icons">search</i>
+          </span>
+
+          <span id="searchBar">
+            <input type="input" name="search" id="searchInput" placeholder="What can we help you find?"/>
+            <button id="searchButton" type="submit"><i class="material-icons">search</i></button>
+          </span>
+
+          <i class="material-icons">more_vert</i>
+
         </div>
       </div>
       <h1 class="title">
